@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <title>FCC Cloropleth Map</title>
+</head>
+<body>
+    <h1 id="title">US Educational Attainment</h1>
+    <h4 id="description">Percentage of adults age 25 and older with a bachelor's degree or higher <br><a href="https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx">Source</a></h4>
+    <div id="tooltip"></div>
+    <svg id="canvas">
+
+    </svg>
+    <svg id="legend">
+        <g>
+            <rect x="10" y="0" width="40" height="40" fill="#eb2f06"/>
+            <text x="60" y="25" fill="black">Less than 10%</text>
+        </g>
+        <g>
+            <rect x="10" y="40" width="40" height="40" fill="#ffaf40"/>
+            <text x="60" y="65" fill="black">10% to 20%</text>
+        </g>
+        <g>
+            <rect x="180" y="0" width="40" height="40" fill="#fff200"/>
+            <text x="230" y="25" fill="black">20% to 30%</text>
+        </g>
+        <g>
+            <rect x="180" y="40" width="40" height="40" fill="#18dcff"/>
+            <text x="230" y="65" fill="black">30% to 40%</text>
+        </g>
+        <g>
+            <rect x="330" y="0" width="40" height="40" fill="#7efff5"/>
+            <text x="380" y="25" fill="black">40% to 50%</text>
+        </g>
+        <g>
+            <rect x="330" y="40" width="40" height="40" fill="#32ff7e"/>
+            <text x="380" y="65" fill="black">Greater than 50%</text>
+        </g>
+    </svg>
+</body>
+<script defer src="script.js"></script>
+<script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
